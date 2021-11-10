@@ -15,7 +15,7 @@ class HypercomplexNumberPreprocessing():
         if len(vector) % 2 == 1:
             vector = np.append(vector, 1)
         
-        output_vector = [math.atan(vector[i]/vector[i+1]) for i in range(0, len(vector), 2)] +     [np.sqrt(sum([i*i for i in vector])), math.asin(vector[-1]/np.sqrt(sum([i*i for i in vector])))] + [0]*(int(len(vector)/2) -2)
+        output_vector = [math.atan(vector[i]/vector[i+1]) for i in range(0, len(vector), 2)] +     [np.sqrt(sum([i*i for i in vector])), math.asin(vector[-1]/np.sqrt(sum([i*i for i in vector])))] 
         
         return output_vector
 
@@ -26,7 +26,7 @@ class HypercomplexNumberPreprocessing():
         if len(vector) % 2 == 1:
             vector = np.append(vector, 1)
         
-        output_vector = [math.sqrt(vector[i]**2 + vector[i+1]**2) for i in range(0, len(vector), 2)] + [np.sqrt(sum([i*i for i in vector])), math.asin(vector[-1]/np.sqrt(sum([i*i for i in vector])))] + [0]*(int(len(vector)/2) - 2)
+        output_vector = [math.sqrt(vector[i]**2 + vector[i+1]**2) for i in range(0, len(vector), 2)] + [np.sqrt(sum([i*i for i in vector])), math.asin(vector[-1]/np.sqrt(sum([i*i for i in vector])))] 
         
         return output_vector
 
